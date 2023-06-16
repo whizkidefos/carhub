@@ -1,4 +1,6 @@
+import Navbar from '@/components/Navbar'
 import './globals.css'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'CarHub - A Car Hire Service',
@@ -12,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='relative'>{children}</body>
+      <body className='relative'>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
